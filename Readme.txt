@@ -1,0 +1,34 @@
+This contains the Digital Key Generator && also the SSL HANDSHAKE Implementaion  
+
+
+Instructions:  
+
+        # 1. Install required package
+        npm install 
+
+        # 2. Generate certificates (run once)
+        node digital_cert.js
+
+        # 3. In separate terminals:
+        # -------------------------
+        # Terminal 1: Start server
+        node server.js
+
+        # Terminal 2: Connect client
+        node client.js
+      
+      
+Expected Flow:
+
+
+        Server starts first: "Server listening on 8000"
+
+        Client connects automatically
+
+        You'll see cipher negotiation messages
+
+        Client/server exchange "Hello" messages
+
+        Connection closes automatically
+
+        Note: The client trusts certificates signed by the generated CA (ca-cert.pem). Run all commands from the project directory.
